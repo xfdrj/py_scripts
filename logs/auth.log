@@ -1,0 +1,12 @@
+Oct 10 13:55:01 gpu-node-01 sshd[1201]: Failed password for root from 203.0.113.50 port 51022 ssh2
+Oct 10 13:55:03 gpu-node-01 sshd[1201]: Failed password for invalid user admin from 203.0.113.50 port 51024 ssh2
+Oct 10 13:55:07 gpu-node-01 sshd[1203]: Accepted publickey for ubuntu from 192.0.2.10 port 40110 ssh2
+Oct 10 13:56:12 gpu-node-02 sshd[877]: Failed password for root from 198.51.100.23 port 51030 ssh2
+Oct 10 13:56:20 gpu-node-02 sshd[877]: Failed password for invalid user test from 203.0.113.50 port 51040 ssh2
+Oct 10 13:56:31 gpu-node-02 sshd[879]: Connection closed by 198.51.100.23 port 51044 [preauth]
+Oct 10 13:57:02 gpu-node-01 sshd[1210]: Failed password for ubuntu from 192.0.2.77 port 52001 ssh2
+Oct 10 13:57:40 gpu-node-02 sshd[882]: Failed password for invalid user oracle from 198.51.100.23 port 51050 ssh2
+Oct 10 13:58:05 gpu-node-01 sshd[1215]: Accepted password for deploy from 192.0.2.10 port 40122 ssh2
+Oct 10 13:58:30 gpu-node-01 sshd[1220]: Failed password for root from 203.0.113.50 port 51060 ssh2
+Oct 10 13:59:01 gpu-node-02 sshd[890]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=203.0.113.50  user=root
+Oct 10 13:59:44 gpu-node-02 sshd[893]: Failed password for root from 198.51.100.23 port 51070 ssh2

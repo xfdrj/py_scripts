@@ -1,0 +1,10 @@
+203.0.113.9 - - [10/Oct/2026:14:10:12 +0000] "POST /login HTTP/1.1" 401 96 "-" "Mozilla/5.0"
+203.0.113.9 - - [10/Oct/2026:14:10:15 +0000] "POST /login HTTP/1.1" 401 96 "-" "Mozilla/5.0"
+203.0.113.9 - - [10/Oct/2026:14:10:19 +0000] "POST /login HTTP/1.1" 500 128 "-" "Mozilla/5.0"
+192.0.2.44 - - [10/Oct/2026:14:15:00 +0000] "GET /api/nodes HTTP/1.1" 200 512 "-" "Mozilla/5.0"
+203.0.113.5 - - [10/Oct/2026:14:20:31 +0000] "GET /api/nodes HTTP/1.1" 200 512 "-" "curl/8.4.0"
+203.0.113.5 - - [10/Oct/2026:14:21:00 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "curl/8.4.0"
+this line is broken and has no log structure at all
+198.51.100.7 - - [10/Oct/2026:15:02:44 +0000] "GET /api/nodes HTTP/1.1" 504 128 "-" "python-requests/2.31"
+203.0.113.5 - - [10/Oct/2026:15:03:10 +0000] "GET /api/jobs HTTP/1.1" 200 256 "-" "curl/8.4.0"
+192.0.2.44 - - [10/Oct/2026:15:03:59 +0000] "GET /favicon.ico HTTP/1.1" 404 0 "-" "Mozilla/5.0"
