@@ -1,3 +1,27 @@
+# Requests and errors per hour (CLI)
+#
+# Command-line tool that groups access log requests by hour and reports,
+# for each hour, the total number of requests and the number of responses
+# with status >= --min-status.
+#
+# Input:   path to a directory containing access_*.log files
+# Options: --min-status  status code from which a response counts as an error (default: 500)
+#          --top         number of rows to show (default: all)
+# Output:  table with columns hour, total, errors
+# Tools:   Python standard library (argparse, re, pathlib, collections)
+#
+# Usage:
+#
+#   python <filename>.py logs
+#   python <filename>.py logs --min-status 400 --top 2
+#
+# Example output (--min-status 500):
+#
+#   hour              total  errors
+#   10/Oct 13:00        6      2
+#   10/Oct 14:00       10      2
+#   10/Oct 15:00        3      1
+
 import argparse
 from collections import Counter, defaultdict
 from pathlib import Path

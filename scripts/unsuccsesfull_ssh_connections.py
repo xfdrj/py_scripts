@@ -1,3 +1,20 @@
+# Failed SSH logins by source IP
+#
+# Parses sshd entries from auth.log (two hosts: gpu-node-01, gpu-node-02)
+# and counts failed password attempts per source IP, with a per-host breakdown.
+# "invalid user" attempts are counted as failures. Successful logins,
+# closed connections and pam_unix "authentication failure" lines are ignored.
+#
+# Input:   auth.log
+# Output:  source IPs sorted by number of failures, with counts per host
+# Tools:   Python standard library (re, collections.defaultdict, collections.Counter)
+#
+# Example output:
+#
+#   203.0.113.50   4   (gpu-node-01: 3, gpu-node-02: 1)
+#   198.51.100.23  3   (gpu-node-02: 3)
+#   192.0.2.77     1   (gpu-node-01: 1)
+
 from collections import Counter, defaultdict
 import re
 import sys

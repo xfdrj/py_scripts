@@ -1,3 +1,22 @@
+# Share of 5xx server errors per client IP
+#
+# Scans a directory of access logs (access_*.log) and, for each client IP,
+# computes total requests, requests answered with status 500 or higher,
+# and the error share in percent. IPs are sorted by error share, highest first.
+# The min_requests parameter excludes IPs with too few requests, because a share
+# based on one or two requests is misleading.
+#
+# Input:   path to a directory containing access_*.log files
+# Output:  one line per IP: errors/total and error share
+# Tools:   Python standard library (re, pathlib, collections)
+#
+# Example output:
+#
+#   198.51.100.7   4/5   80.0%
+#   203.0.113.9    1/4   25.0%
+#   203.0.113.5    0/6    0.0%
+#   192.0.2.44     0/4    0.0%
+
 from collections import Counter, defaultdict
 from pathlib import Path
 import re
